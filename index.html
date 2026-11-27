@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 0 – Mapeo colaborativo en OpenStreetMap | Col. Narvarte</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+ html,body{margin:0;height:100%;font-family:Segoe UI,Arial,sans-serif}
+ header{background:#6b1d2f;color:#fff;padding:10px 16px}
+ header h1{margin:0;font-size:18px} header p{margin:3px 0 0;font-size:13px;opacity:.9}
+ #map{position:absolute;top:62px;bottom:0;left:0;right:0}
+ .legend{background:#fff;padding:8px 10px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.3);font-size:12px;line-height:18px}
+ .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:1px solid #fff}
+ .popup b{font-size:14px} .popup table{font-size:12px;margin-top:4px} .popup td{padding:1px 4px;vertical-align:top}
+</style>
+</head>
+<body>
+<header>
+ <h1>Mis 20 aportes a OpenStreetMap – Col. Narvarte, CDMX</h1>
+ <p>Lab 0: Collaborative Mapping and Geodata Extraction · Web Mapping 2026 (MIIGAiK) · Miguel Ángel González García (usuario OSM: Mikemágg)</p>
+</header>
+<div id="map"></div>
+<script>
+const datos = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1552999, 19.3966376]}, "properties": {"addr:housenumber": "1320", "addr:street": "YACATAS", "name": "SNEAKER CLEAN", "shop": "laundry", "osm_id": 14329327779}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1537201, 19.3975591]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "113", "addr:postcode": "03023", "addr:street": "XOCHICALCO", "brand": "Oxxo", "brand:wikidata": "Q1342538", "name": "Oxxo", "shop": "convenience", "osm_id": 14329336921}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1546481, 19.3970229]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "1418", "addr:postcode": "03023", "addr:street": "DIAGONAL SAN ANTONIO", "name": "SOCIO ANCA", "second_hand": "only", "shop": "car", "osm_id": 14329343979}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1538323, 19.3974203]}, "properties": {"addr:housenumber": "1436", "addr:postcode": "03023", "addr:street": "DIAGONAL SAN ANTONIO", "name": "SANTI", "opening_hours": "08:00-20:00", "payment:cash": "yes", "payment:contactless": "yes", "shop": "convenience", "osm_id": 14329351288}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1537258, 19.3971596]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "121", "addr:postcode": "03023", "addr:street": "XOCHICALCO", "amenity": "cafe", "cuisine": "coffee_shop", "internet_access": "yes", "internet_access:fee": "no", "name": "TIERRA GARAT", "opening_hours": "07:00-22:00", "outdoor_seating": "no", "osm_id": 14329353001}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1549612, 19.3967885]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "1320", "addr:postcode": "03023", "addr:street": "DIAGONAL SAN ANTONIO", "brand": "Petco", "brand:wikidata": "Q7171798", "name": "Petco", "shop": "pet", "website": "https://www.petco.com.mx/", "osm_id": 14329356605}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1548254, 19.3968433]}, "properties": {"addr:housenumber": "1410-A", "addr:postcode": "03023", "addr:street": "Avenida Diagonal San Antonio", "name": "EL TORITO", "opening_hours": "08:00-18:00", "shop": "butcher", "osm_id": 14329367339}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1539155, 19.3973597]}, "properties": {"addr:housenumber": "1435", "addr:postcode": "03023", "addr:street": "DIAGONAL SAN ANTONIO", "name": "VERDULERIA", "shop": "convenience", "osm_id": 14329372538}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1538057, 19.3959481]}, "properties": {"addr:postcode": "03023", "addr:street": "Calle Xochicalco", "shop": "hardware", "osm_id": 14329381701}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1539964, 19.3984216]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "1006", "addr:postcode": "03023", "addr:street": "XOCHICALCO", "brand": "Tiendas 3B", "brand:wikidata": "Q113217378", "name": "Tiendas 3B", "opening_hours": "08:00-22:00", "shop": "convenience", "osm_id": 14329416973}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1530377, 19.3984283]}, "properties": {"addr:housenumber": "1064", "addr:postcode": "03023", "addr:street": "LA MORENA", "amenity": "restaurant", "name": "EL FOGÓN Y LA LEÑA", "osm_id": 14329463690}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1543646, 19.3986012]}, "properties": {"addr:housenumber": "93", "addr:postcode": "03023", "addr:street": "UXMAL", "name": "LAVA SMILING", "shop": "laundry", "osm_id": 14329473924}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1549707, 19.3980981]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "98", "addr:postcode": "03023", "addr:street": "CALLE YACATAS", "amenity": "cafe", "name": "EMILIA CAFE & BISTRO", "osm_id": 14329473925}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1544, 19.3984593]}, "properties": {"addr:city": "Ciudad de México", "addr:housenumber": "93", "addr:postcode": "03023", "addr:street": "UXMAL", "brand": "Oxxo", "brand:wikidata": "Q1342538", "name": "Oxxo", "shop": "convenience", "osm_id": 14329617223}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1546636, 19.3981191]}, "properties": {"addr:housenumber": "957", "addr:postcode": "03023", "addr:street": "LA MORENA", "name": "CERRAJERIA AUTOMOTRIZ", "shop": "locksmith", "osm_id": 14329626927}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1546216, 19.3984604]}, "properties": {"addr:housenumber": "962", "addr:postcode": "03023", "addr:street": "Calle La Morena", "amenity": "language_school", "education": "language_school", "name": "LINGUISTICA", "osm_id": 14329635433}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1537063, 19.3981113]}, "properties": {"addr:city": "CIUDAD DE MEXICO", "addr:housenumber": "1013", "addr:postcode": "03023", "addr:street": "LA MORENA", "amenity": "cafe", "name": "WAKE CUP KFÉ", "osm_id": 14329645926}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1549497, 19.3980519]}, "properties": {"addr:city": "CIUDAD DE MEXICO", "addr:postcode": "03023", "addr:street": "LA MORENA 953", "name": "BALANCE SPA NARVARTE", "shop": "massage", "osm_id": 14329648258}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1533911, 19.3984814]}, "properties": {"addr:housenumber": "1054", "addr:postcode": "03023", "addr:street": "LA MORENA", "amenity": "restaurant", "name": "TUSTA COCINA SELECTA", "osm_id": 14329654515}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.154255, 19.3982809]}, "properties": {"addr:city": "Ciudad de México", "addr:postcode": "03023", "addr:street": "Calle Uxmal Y LA MORENA", "amenity": "fast_food", "cuisine": "burger", "name": "HAMBURGUESAS AL CARBON", "osm_id": 14329656005}}]};
+const cat = p => p.amenity==='cafe' ? ['Cafetería','#8e5a2b']
+ : ['restaurant','fast_food'].includes(p.amenity) ? ['Restaurante / comida','#d35400']
+ : p.shop==='convenience' ? ['Tienda de conveniencia','#2471a3']
+ : p.shop==='laundry' ? ['Lavandería','#17a589']
+ : ['Otros comercios y servicios','#7d3c98'];
+const map = L.map('map');
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+ attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>'}).addTo(map);
+const capa = L.geoJSON(datos,{
+ pointToLayer:(f,ll)=>L.circleMarker(ll,{radius:8,color:'#fff',weight:2,fillColor:cat(f.properties)[1],fillOpacity:.95}),
+ onEachFeature:(f,l)=>{const p=f.properties;
+  const filas=Object.entries(p).filter(([k])=>k!=='osm_id').map(([k,v])=>`<tr><td><code>${k}</code></td><td>${v}</td></tr>`).join('');
+  l.bindPopup(`<div class="popup"><b>${p.name||'(sin nombre)'}</b><br>${cat(p)[0]}<table>${filas}</table>
+   <a href="https://www.openstreetmap.org/node/${p.osm_id}" target="_blank">Ver nodo ${p.osm_id} en OSM</a></div>`);
+  l.bindTooltip(p.name||'(sin nombre)');}
+}).addTo(map);
+map.fitBounds(capa.getBounds(),{padding:[40,40]});
+const leyenda=L.control({position:'bottomright'});
+leyenda.onAdd=()=>{const d=L.DomUtil.create('div','legend');const c={};
+ datos.features.forEach(f=>{const [n,col]=cat(f.properties);c[n]=c[n]||{col,k:0};c[n].k++;});
+ d.innerHTML='<b>Tipo de lugar</b><br>'+Object.entries(c).map(([n,o])=>`<i style="background:${o.col}"></i>${n} (${o.k})`).join('<br>')
+  +`<br><b>Total: ${datos.features.length} puntos</b>`;return d;};
+leyenda.addTo(map);
+L.control.scale({imperial:false}).addTo(map);
+</script>
+</body>
+</html>

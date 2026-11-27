@@ -1,0 +1,392 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1552999,
+     19.3966376
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1320",
+    "addr:street": "YACATAS",
+    "name": "SNEAKER CLEAN",
+    "shop": "laundry",
+    "osm_id": 14329327779
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1537201,
+     19.3975591
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "113",
+    "addr:postcode": "03023",
+    "addr:street": "XOCHICALCO",
+    "brand": "Oxxo",
+    "brand:wikidata": "Q1342538",
+    "name": "Oxxo",
+    "shop": "convenience",
+    "osm_id": 14329336921
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1546481,
+     19.3970229
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "1418",
+    "addr:postcode": "03023",
+    "addr:street": "DIAGONAL SAN ANTONIO",
+    "name": "SOCIO ANCA",
+    "second_hand": "only",
+    "shop": "car",
+    "osm_id": 14329343979
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1538323,
+     19.3974203
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1436",
+    "addr:postcode": "03023",
+    "addr:street": "DIAGONAL SAN ANTONIO",
+    "name": "SANTI",
+    "opening_hours": "08:00-20:00",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "shop": "convenience",
+    "osm_id": 14329351288
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1537258,
+     19.3971596
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "121",
+    "addr:postcode": "03023",
+    "addr:street": "XOCHICALCO",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "TIERRA GARAT",
+    "opening_hours": "07:00-22:00",
+    "outdoor_seating": "no",
+    "osm_id": 14329353001
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1549612,
+     19.3967885
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "1320",
+    "addr:postcode": "03023",
+    "addr:street": "DIAGONAL SAN ANTONIO",
+    "brand": "Petco",
+    "brand:wikidata": "Q7171798",
+    "name": "Petco",
+    "shop": "pet",
+    "website": "https://www.petco.com.mx/",
+    "osm_id": 14329356605
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1548254,
+     19.3968433
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1410-A",
+    "addr:postcode": "03023",
+    "addr:street": "Avenida Diagonal San Antonio",
+    "name": "EL TORITO",
+    "opening_hours": "08:00-18:00",
+    "shop": "butcher",
+    "osm_id": 14329367339
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1539155,
+     19.3973597
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1435",
+    "addr:postcode": "03023",
+    "addr:street": "DIAGONAL SAN ANTONIO",
+    "name": "VERDULERIA",
+    "shop": "convenience",
+    "osm_id": 14329372538
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1538057,
+     19.3959481
+    ]
+   },
+   "properties": {
+    "addr:postcode": "03023",
+    "addr:street": "Calle Xochicalco",
+    "shop": "hardware",
+    "osm_id": 14329381701
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1539964,
+     19.3984216
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "1006",
+    "addr:postcode": "03023",
+    "addr:street": "XOCHICALCO",
+    "brand": "Tiendas 3B",
+    "brand:wikidata": "Q113217378",
+    "name": "Tiendas 3B",
+    "opening_hours": "08:00-22:00",
+    "shop": "convenience",
+    "osm_id": 14329416973
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1530377,
+     19.3984283
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1064",
+    "addr:postcode": "03023",
+    "addr:street": "LA MORENA",
+    "amenity": "restaurant",
+    "name": "EL FOGÓN Y LA LEÑA",
+    "osm_id": 14329463690
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1543646,
+     19.3986012
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "93",
+    "addr:postcode": "03023",
+    "addr:street": "UXMAL",
+    "name": "LAVA SMILING",
+    "shop": "laundry",
+    "osm_id": 14329473924
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1549707,
+     19.3980981
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "98",
+    "addr:postcode": "03023",
+    "addr:street": "CALLE YACATAS",
+    "amenity": "cafe",
+    "name": "EMILIA CAFE & BISTRO",
+    "osm_id": 14329473925
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1544,
+     19.3984593
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:housenumber": "93",
+    "addr:postcode": "03023",
+    "addr:street": "UXMAL",
+    "brand": "Oxxo",
+    "brand:wikidata": "Q1342538",
+    "name": "Oxxo",
+    "shop": "convenience",
+    "osm_id": 14329617223
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1546636,
+     19.3981191
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "957",
+    "addr:postcode": "03023",
+    "addr:street": "LA MORENA",
+    "name": "CERRAJERIA AUTOMOTRIZ",
+    "shop": "locksmith",
+    "osm_id": 14329626927
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1546216,
+     19.3984604
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "962",
+    "addr:postcode": "03023",
+    "addr:street": "Calle La Morena",
+    "amenity": "language_school",
+    "education": "language_school",
+    "name": "LINGUISTICA",
+    "osm_id": 14329635433
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1537063,
+     19.3981113
+    ]
+   },
+   "properties": {
+    "addr:city": "CIUDAD DE MEXICO",
+    "addr:housenumber": "1013",
+    "addr:postcode": "03023",
+    "addr:street": "LA MORENA",
+    "amenity": "cafe",
+    "name": "WAKE CUP KFÉ",
+    "osm_id": 14329645926
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1549497,
+     19.3980519
+    ]
+   },
+   "properties": {
+    "addr:city": "CIUDAD DE MEXICO",
+    "addr:postcode": "03023",
+    "addr:street": "LA MORENA 953",
+    "name": "BALANCE SPA NARVARTE",
+    "shop": "massage",
+    "osm_id": 14329648258
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1533911,
+     19.3984814
+    ]
+   },
+   "properties": {
+    "addr:housenumber": "1054",
+    "addr:postcode": "03023",
+    "addr:street": "LA MORENA",
+    "amenity": "restaurant",
+    "name": "TUSTA COCINA SELECTA",
+    "osm_id": 14329654515
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.154255,
+     19.3982809
+    ]
+   },
+   "properties": {
+    "addr:city": "Ciudad de México",
+    "addr:postcode": "03023",
+    "addr:street": "Calle Uxmal Y LA MORENA",
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "HAMBURGUESAS AL CARBON",
+    "osm_id": 14329656005
+   }
+  }
+ ]
+}
